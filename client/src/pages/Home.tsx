@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import { useEffect, useState } from "react";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
@@ -526,6 +527,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <Testimonials />
 
       {/* Investment Section */}
       <section className="border-b border-border bg-card py-16 md:py-24">
