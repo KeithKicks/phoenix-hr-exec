@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import { useState } from "react";
 
 interface CaseStudy {
   id: number;
@@ -120,6 +121,8 @@ const caseStudies: CaseStudy[] = [
 ];
 
 export default function Testimonials() {
+  const [showAll, setShowAll] = useState(false);
+
   return (
     <section className="border-b border-border bg-background py-16 md:py-24">
       <div className="container">
@@ -136,10 +139,10 @@ export default function Testimonials() {
         </p>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {caseStudies.map((study) => (
+          {caseStudies.map((study, idx) => (
             <div
               key={study.id}
-              className="flex flex-col rounded-lg border border-border bg-card p-6 shadow-sm hover:border-primary transition-colors"
+              className={`flex flex-col rounded-lg border border-border bg-card p-6 shadow-sm hover:border-primary transition-colors${idx >= 3 && !showAll ? " hidden md:flex" : ""}`}
             >
               {/* Header */}
               <div className="mb-4">
@@ -209,8 +212,18 @@ export default function Testimonials() {
           ))}
         </div>
 
+        {/* Show more/less — mobile only */}
+        <div className="mt-6 flex justify-center md:hidden">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="rounded-full border border-border px-6 py-2 text-sm text-muted-foreground hover:text-foreground hover:border-primary transition-colors"
+          >
+            {showAll ? "Show less" : "Show all case studies"}
+          </button>
+        </div>
+
         {/* Summary Stats */}
-        <div className="mt-16 grid gap-6 md:grid-cols-4">
+        <div className="mt-16 grid gap-6 grid-cols-2 md:grid-cols-4">
           {[
             { stat: "6+", label: "Organizations Served" },
             { stat: "100%", label: "Engagement Completion Rate" },

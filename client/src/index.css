@@ -181,16 +181,17 @@
 
   @media (min-width: 1024px) {
     .container {
-      padding-left: 6rem; /* 96px - increased desktop padding */
+      padding-left: 6rem; /* 96px - desktop padding */
       padding-right: 6rem;
-      max-width: 1280px; /* Standard content width */
+      max-width: 1100px; /* Tighter max-width for centered editorial feel */
     }
   }
 
   @media (min-width: 1280px) {
     .container {
-      padding-left: 8rem; /* 128px - extra large desktop padding */
-      padding-right: 8rem;
+      padding-left: 4rem; /* 64px - let max-width do the centering at xl */
+      padding-right: 4rem;
+      max-width: 1000px; /* Keeps content column tight and centered on wide screens */
     }
   }
 }
