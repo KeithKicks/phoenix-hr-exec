@@ -89,65 +89,46 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-br from-primary via-transparent to-transparent" />
         </div>
         <div className="container relative">
-          <div className="grid gap-12 md:grid-cols-2 md:items-center">
-            {/* Left: text */}
-            <div>
-              <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-2">
-                <img
-                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663403480741/XK8BuF8bKskDQGZWW8NazM/bottled-phoenix-logo_2b8e9a1f.png"
-                  alt="Phoenix"
-                  className="h-4 w-auto"
-                />
-                <span className="text-xs uppercase tracking-wider text-muted-foreground">
-                  Confidential | Corporate Referral Program
+          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-2">
+            <img
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663403480741/XK8BuF8bKskDQGZWW8NazM/bottled-phoenix-logo_2b8e9a1f.png"
+              alt="Phoenix"
+              className="h-4 w-auto"
+            />
+            <span className="text-xs uppercase tracking-wider text-muted-foreground">
+              Confidential | Corporate Referral Program
+            </span>
+          </div>
+
+          <h1 className="mb-6 max-w-3xl text-4xl md:text-5xl font-bold leading-tight">
+            The Executive You Can't Afford to Lose Is Already at{" "}
+            <span className="text-primary">Risk.</span>
+          </h1>
+
+          <p className="mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed">
+            Phoenix Executive Reset is a private 31-day performance restoration program for organizations that have identified a high-value leader whose alcohol-related performance risk, operational discipline erosion, or personal volatility is beginning to affect their effectiveness, before it becomes a visible, costly problem.
+          </p>
+
+          <div className="mb-8 flex flex-wrap gap-2">
+            {["Fully Confidential", "No Disruption to Role", "31-Day Structured Engagement", "Direct Principal Delivery"].map(
+              (pill) => (
+                <span
+                  key={pill}
+                  className="rounded-full border border-border bg-background px-3 py-1 text-xs uppercase tracking-wider text-muted-foreground"
+                >
+                  {pill}
                 </span>
-              </div>
+              )
+            )}
+          </div>
 
-              <h1 className="mb-6 text-4xl md:text-5xl font-bold leading-tight">
-                The Executive You Can't Afford to Lose Is Already at{" "}
-                <span className="text-primary">Risk.</span>
-              </h1>
-
-              <p className="mb-8 text-lg text-muted-foreground leading-relaxed">
-                Phoenix Executive Reset is a private 31-day performance restoration program for organizations that have identified a high-value leader whose alcohol-related performance risk, operational discipline erosion, or personal volatility is beginning to affect their effectiveness, before it becomes a visible, costly problem.
-              </p>
-
-              <div className="mb-8 flex flex-wrap gap-2">
-                {["Fully Confidential", "No Disruption to Role", "31-Day Structured Engagement", "Direct Principal Delivery"].map(
-                  (pill) => (
-                    <span
-                      key={pill}
-                      className="rounded-full border border-border bg-background px-3 py-1 text-xs uppercase tracking-wider text-muted-foreground"
-                    >
-                      {pill}
-                    </span>
-                  )
-                )}
-              </div>
-
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-                <Button size="lg" className="w-full sm:w-auto">
-                  Request a Confidential Consultation →
-                </Button>
-                <span className="text-sm italic text-muted-foreground">
-                  For HR, CPO, CHRO, and CEO enquiries
-                </span>
-              </div>
-            </div>
-
-            {/* Right: stat cards */}
-            <div className="hidden md:flex flex-col gap-4">
-              {[
-                { stat: "$450K–$1M+", label: "Typical executive replacement cost" },
-                { stat: "31 Days", label: "Full reset. Leader stays in role." },
-                { stat: "$8,500", label: "Total engagement investment" },
-              ].map((item, i) => (
-                <div key={i} className="rounded-lg border border-border bg-background/80 p-6 backdrop-blur">
-                  <div className="text-2xl font-bold text-foreground">{item.stat}</div>
-                  <p className="mt-1 text-sm text-muted-foreground">{item.label}</p>
-                </div>
-              ))}
-            </div>
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+            <Button size="lg" className="w-full sm:w-auto">
+              Request a Confidential Consultation →
+            </Button>
+            <span className="text-sm italic text-muted-foreground">
+              For HR, CPO, CHRO, and CEO enquiries
+            </span>
           </div>
         </div>
       </section>
@@ -195,9 +176,9 @@ export default function Home() {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className="rounded-lg border border-border bg-card p-6 shadow-sm"
+                  className="rounded-lg border border-border bg-card px-5 py-4 shadow-sm"
                 >
-                  <div className="mb-2 text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
+                  <div className="mb-1 text-lg font-bold text-foreground">
                     {item.stat}
                   </div>
                   <p className="text-sm text-muted-foreground leading-relaxed">
