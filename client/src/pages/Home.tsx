@@ -55,28 +55,29 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex items-center justify-between py-4">
-          <div className="flex items-center gap-2">
+        <div className="container flex items-center justify-between gap-2 py-2 md:py-4">
+          <div className="flex items-center gap-1 md:gap-2 min-w-0">
             <img
               src="https://d2xsxph8kpxj0f.cloudfront.net/310519663403480741/XK8BuF8bKskDQGZWW8NazM/bottled-phoenix-logo_2b8e9a1f.png"
               alt="The Bottled Phoenix"
-              className="h-8 w-auto"
+              className="h-6 md:h-8 w-auto flex-shrink-0"
             />
-            <div className="text-lg font-bold text-primary">The Bottled Phoenix</div>
+            <div className="hidden sm:block text-sm md:text-lg font-bold text-primary truncate">The Bottled Phoenix</div>
           </div>
-          <div className="flex items-center gap-4">
-            <span className="text-xs uppercase tracking-wide text-muted-foreground">
+          <div className="flex items-center gap-2 md:gap-4">
+            <span className="hidden md:inline text-xs uppercase tracking-wide text-muted-foreground">
               HR & Corporate Referrals
             </span>
             <button
               onClick={toggleTheme}
-              className="rounded-lg border border-border p-2 hover:bg-secondary transition-colors"
+              className="rounded-lg border border-border p-1.5 md:p-2 hover:bg-secondary transition-colors flex-shrink-0"
               aria-label="Toggle theme"
             >
               {theme === "light" ? "🌙" : "☀️"}
             </button>
-            <Button variant="default" size="sm">
-              Request Consultation
+            <Button variant="default" size="sm" className="text-xs md:text-sm">
+              <span className="hidden sm:inline">Request Consultation</span>
+              <span className="sm:hidden">Consult</span>
             </Button>
           </div>
         </div>
