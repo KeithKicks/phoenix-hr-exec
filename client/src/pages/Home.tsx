@@ -162,8 +162,8 @@ export default function Home() {
             <div className="space-y-4">
               {[
                 {
-                  stat: "1.5–2×",
-                  desc: "Typical cost of replacing a senior executive, relative to their annual salary, not including disruption, knowledge loss, or team instability.",
+                  stat: "$450K–$1M+",
+                  desc: "The typical cost of replacing a senior executive, before disruption, knowledge loss, or team instability is factored in. A $300K leader costs $450K–$600K to replace. A $500K leader costs significantly more.",
                 },
                 {
                   stat: "31 Days",
