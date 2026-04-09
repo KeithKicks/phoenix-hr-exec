@@ -56,7 +56,14 @@ export default function Home() {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex items-center justify-between py-4">
-          <div className="text-lg font-bold text-primary">Phoenix</div>
+          <div className="flex items-center gap-2">
+            <img
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663403480741/XK8BuF8bKskDQGZWW8NazM/bottled-phoenix-logo_2b8e9a1f.png"
+              alt="The Bottled Phoenix"
+              className="h-8 w-auto"
+            />
+            <div className="text-lg font-bold text-primary">The Bottled Phoenix</div>
+          </div>
           <div className="flex items-center gap-4">
             <span className="text-xs uppercase tracking-wide text-muted-foreground">
               HR & Corporate Referrals
@@ -82,7 +89,11 @@ export default function Home() {
         </div>
         <div className="container relative">
           <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-2">
-            <div className="h-2 w-2 rounded-full bg-primary" />
+            <img
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663403480741/XK8BuF8bKskDQGZWW8NazM/bottled-phoenix-logo_2b8e9a1f.png"
+              alt="Phoenix"
+              className="h-4 w-auto"
+            />
             <span className="text-xs uppercase tracking-wider text-muted-foreground">
               Confidential | Corporate Referral Program
             </span>
@@ -670,7 +681,7 @@ export default function Home() {
 
           <div className="text-center">
             <p className="text-sm text-muted-foreground">
-              Principal | The Bottled Phoenix
+              Keith Allen Schuh, Principal | The Bottled Phoenix
             </p>
             <p className="text-xs text-muted-foreground">
               Phoenix Executive Reset | Private Executive Performance Restoration
@@ -683,7 +694,14 @@ export default function Home() {
       <footer className="border-t border-border bg-foreground/5 py-8">
         <div className="container">
           <div className="mb-4 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <div className="text-lg font-bold text-primary">Phoenix</div>
+            <div className="flex items-center gap-2">
+              <img
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663403480741/XK8BuF8bKskDQGZWW8NazM/bottled-phoenix-logo_2b8e9a1f.png"
+                alt="The Bottled Phoenix"
+                className="h-6 w-auto"
+              />
+              <div className="text-lg font-bold text-primary">The Bottled Phoenix</div>
+            </div>
             <div className="flex gap-6">
               <a href="#" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors">
                 Assessment Page
